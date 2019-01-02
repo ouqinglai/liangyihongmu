@@ -2519,6 +2519,7 @@ define("page/mobile", function(a, t, e) {
                 t && d.el ? (d.el.trigger("swipe"),
                 d.el.trigger("swipe" + t)) : void 0
             }).on("touchstart MSPointerDown pointerdown", function(e) {
+                clearInterval(window.__autoplay.setInter)
                 return !(S = r(e, "down")) || u(e) ? (T = S ? e : e.touches[0],
                 e.touches && 1 === e.touches.length && d.x2 && (d.x2 = d.y2 = void 0),
                 d.el = t("tagName"in T.target ? T.target : T.target.parentNode),
@@ -2544,6 +2545,7 @@ define("page/mobile", function(a, t, e) {
                 d.y2 = e.pageY,
                 y(e)) : void 0
             }).on("touchend MSPointerUp pointerup", function(e) {
+                window.__autoplay();
                 return !(S = r(e, "up")) || u(e) ? (o(),
                 w(),
                 x = !0) : void 0
