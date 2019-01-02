@@ -2031,7 +2031,7 @@ define("page/mobile", function(a, t, e) {
             a = e.trigger ? bt(e.trigger) : "",
             r = parseInt(parseFloat(i.width) * o.getPageSize().width / 100),
             t = parseInt(parseInt(i.height) * o.getPageSize().height / 100),
-            "<div id='cmp-" + e.id + "'             data-tid='" + e.tid + "'                class='cmp image " + a + "'             style='" + o.formatStyleJSONToString(i) + "'                width='" + r + "'               height='" + t + "'>     <img                class='cmp-inner'               src='" + (null != e && null != (s = e.file) && null != (d = s.url) ? d.replace(/(http:|https:)/g, "") : void 0) + "'                style='" + o.formatStyleJSONToString(n) + "'                width='" + r + "'               height='" + t + "'              " + (o.shouldAddCORS(e.file.url) ? 'crossorigin="anonymous"' : "") + "              ondragstart='return false;'     />  </div>") : ""
+            "<div id='cmp-" + e.id + "'             data-tid='" + e.tid + "'                class='cmp image " + a + "'             style='" + o.formatStyleJSONToString(i) + "'                width='" + r + "'               height='" + t + "'>     <img                class='cmp-inner'               src='" + (null != e && null != (s = e.file) && null != (d = s.url) ? d : void 0) + "'                style='" + o.formatStyleJSONToString(n) + "'                width='" + r + "'               height='" + t + "'              " + (o.shouldAddCORS(e.file.url) ? 'crossorigin="anonymous"' : "") + "              ondragstart='return false;'     />  </div>") : ""
         }
         ,
         B = function(e) {
